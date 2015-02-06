@@ -32,9 +32,10 @@
 
 ;;; Code:
 
-(prelude-require-packages '(web-mode))
+(prelude-require-packages '(web-mode multi-web-mode))
 
 (require 'web-mode)
+(require 'multi-web-mode)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -66,7 +67,8 @@
 
 (eval-after-load 'web-mode
   '(progn
-     (defun prelude-web-mode-defaults ())
+     (defun prelude-web-mode-defaults ()
+       multi-web-global-mode)
      (setq prelude-web-mode-hook 'prelude-web-mode-defaults)
 
      (add-hook 'web-mode-hook (lambda ()

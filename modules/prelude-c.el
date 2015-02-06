@@ -34,6 +34,10 @@
 
 (require 'prelude-programming)
 
+(setq auto-mode-alist
+      (append '(("\\.[ch]\\'" . c++\-mode))
+              auto-mode-alist))
+
 (defun prelude-c-mode-common-defaults ()
   (setq c-default-style "k&r"
         c-basic-offset 4)
