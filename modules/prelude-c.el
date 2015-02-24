@@ -41,7 +41,8 @@
 (defun prelude-c-mode-common-defaults ()
   (setq c-default-style "k&r"
         c-basic-offset 4)
-  (c-set-offset 'substatement-open 0))
+  (c-set-offset 'substatement-open 0)
+  (c-toggle-auto-hungry-state t))
 
 (setq prelude-c-mode-common-hook 'prelude-c-mode-common-defaults)
 
