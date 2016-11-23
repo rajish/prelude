@@ -32,8 +32,6 @@
 
 ;;; Code:
 
-(require 'prelude-yasnippet)
-
 (defun prelude-local-comment-auto-fill ()
   (set (make-local-variable 'comment-auto-fill-only-comments) t))
 
@@ -77,8 +75,7 @@ This functions should be added to the hooks of major modes for programming."
   (smartparens-mode +1)
   (prelude-enable-whitespace)
   (prelude-local-comment-auto-fill)
-  (prelude-font-lock-comment-annotations)
-  (yas-minor-mode-on))
+  (prelude-font-lock-comment-annotations))
 
 (setq prelude-prog-mode-hook 'prelude-prog-mode-defaults)
 

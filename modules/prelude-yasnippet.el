@@ -36,9 +36,10 @@
 
 (eval-after-load 'yasnippet
   '(progn
-     (yas/global-mode 1)
-     (setq yas/my-directory (expand-file-name "~/.emacs.d/snippets"))
-     (yas/load-directory yas/my-directory)))
-
+     (message "yasnippet loaded. Loading snippets...")
+     (yas-global-mode 1)
+     (setq yas-my-directory (expand-file-name "~/.emacs.d/snippets"))
+     (yas-load-directory yas-my-directory)))
+(require 'yasnippet)
 (provide 'prelude-yasnippet)
 ;;; prelude-yasnippet.el ends here

@@ -34,6 +34,8 @@
 
 (require 'prelude-programming)
 (prelude-require-packages '(scala-mode ensime))
+(require 'scala-mode)
+(require 'ensime)
 
 (defun prelude-scala-mode-defaults ()
   (subword-mode +1)
