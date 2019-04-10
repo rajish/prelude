@@ -68,8 +68,8 @@
        multi-web-global-mode)
      (setq prelude-web-mode-hook 'prelude-web-mode-defaults)
 
-     (add-hook 'web-mode-hook (lambda ()
-                                (run-hooks 'prelude-web-mode-hook)))))
+  (add-hook 'web-mode-hook (lambda ()
+                             (run-hooks 'prelude-web-mode-hook))))
 
 (provide 'prelude-web)
 ;;; prelude-web.el ends here
